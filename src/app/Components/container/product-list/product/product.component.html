@@ -1,0 +1,38 @@
+<div
+  class="product-item"
+  Highlight
+  [disableProduct]="!products.is_in_inventory"
+  data-mdb-toggle="modal"
+  data-mdb-target="#exampleModal"
+>
+  <div class="wishlist-sale-container">
+    <div class="add-to-wishlist">
+      <i class="fa fa-heart-o" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="on-sale-tag" *ngIf="products.discountPrice">
+    {{ (100 - (products.discountPrice / products.price) * 100).toFixed() }}% OFF
+  </div>
+  <div class="product-image">
+    <img [src]="products.imageURL" alt="img" class="product-image" />
+  </div>
+  <div class="add-to-price">PRICE : {{ products.price }} $</div>
+  <div class="product-name">NAME : {{ products.name }}</div>
+  <div class="product-category">
+    {{ products.gender }} , {{ products.category }} , {{ products.brand }}
+  </div>
+  <div class="product-available-colors">
+    {{ products.color.length }} Colors . Best Seller
+  </div>
+  <div
+    class="product-in-stock"
+    [ngStyle]="{
+      fontWeight: 'bold',
+      color: products.is_in_inventory ? 'Green' : 'Red'
+    }"
+  >
+    {{
+      products.is_in_inventory ? "Available in Stock" : "Not available in Stock"
+    }}
+  </div>
+</div>

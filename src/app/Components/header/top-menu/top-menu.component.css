@@ -1,0 +1,16 @@
+.ekart--top--bar {
+  width: auto;
+  text-align: right;
+  padding: 3px 30px 15px 0;
+  transition: 0.5s;
+}
+@media (max-width: 767px) {
+  .ekart--top--bar {
+    text-align: center;
+    padding: 0;
+  }
+  .ekart--top--bar a {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}

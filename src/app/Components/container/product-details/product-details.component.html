@@ -1,0 +1,95 @@
+<div
+  class="product-details-info scroll"
+  [disableProduct]="!selectedProduct.is_in_inventory"
+>
+  <div class="product-details-close">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </div>
+
+  <div class="product-details-img">
+    <img
+      [src]="selectedProduct.imageURL"
+      alt="img"
+      class="product-details-img"
+    />
+  </div>
+  <div class="product-details">
+    <div class="product-details-name">
+      <h2>{{ selectedProduct.name }}</h2>
+    </div>
+    <div class="product-details-gbc">
+      <span [setBackGround]="{ backColor: 'red', textColor: 'white' }">{{
+        selectedProduct.gender
+      }}</span>
+      <span [setBackGround]="{ backColor: 'yellow', textColor: 'black' }">{{
+        selectedProduct.brand
+      }}</span>
+      <span [setBackGround]="{ backColor: 'black', textColor: 'white' }">{{
+        selectedProduct.category
+      }}</span>
+    </div>
+    <div class="product-details-price">
+      <p>
+        <b>Price Each Pair:</b>
+        <span
+          *ngIf="selectedProduct.is_in_inventory === false"
+          style="background-color: red; color: white"
+          >{{ selectedProduct.price }} $</span
+        >
+        <span
+          *ngIf="!selectedProduct.is_in_inventory === false"
+          style="background-color: green; color: white"
+          >{{ selectedProduct.discountPrice }} $</span
+        >
+        (Inclusive of all taxes)
+      </p>
+    </div>
+    <div class="product-details-size">
+      <div style="padding: 5px 0; border-bottom: 2px solid #ccc">
+        <h4>Available Size</h4>
+      </div>
+    </div>
+    <div style="margin-top: 20px">
+      <span
+        class="product-details-available-size"
+        *ngFor="let varr of selectedProduct.size"
+        >{{ varr }}</span
+      >
+    </div>
+  </div>
+  <div class="product-details-colors">
+    <div style="padding: 5px 0; border-bottom: 2px solid #ccc">
+      <h4>Available Color</h4>
+    </div>
+    <div style="margin-top: 20px">
+      <span
+        class="product-details-available-color"
+        *ngFor="let color of selectedProduct.color"
+        style="background-color: {{ color }}"
+      ></span>
+    </div>
+  </div>
+  <div class="product-details-desc">
+    <div style="padding: 5px 0; border-bottom: 2px solid #ccc">
+      <h4>Product Description</h4>
+    </div>
+    <div style="margin-top: 20px">
+      <p>{{ selectedProduct.description }}</p>
+    </div>
+  </div>
+
+  <div class="product-details-addToCart">
+    <button
+      class="btn btn-addToCart"
+      *ngIf="selectedProduct.is_in_inventory; else notifyMe"
+      appHover
+    >
+      ADD TO CART
+    </button>
+    <ng-template #notifyMe>
+      <button class="btn btn-addToCart">Notify Me</button>
+    </ng-template>
+  </div>
+</div>
+
+<div class="overlay"></div>

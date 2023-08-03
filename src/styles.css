@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+  padding: 0 10px;
+  font-weight: bold;
+  color: #2b2b2b;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.highlight-product {
+  box-shadow: 0 0 1px 3px inset !important;
+  border: #efefef 2px solid !important;
+  box-shadow: 10px 10px 10px #ccc !important;
+  transform: scale(1.05) !important;
+}
+.disable-out-of-stock-product {
+  background-color: #28282b !important;
+  opacity: 0.5;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,53 @@
+.ekart-header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  border-bottom: #e5e4e2 1.5px solid;
+}
+.ekart-logo {
+  margin-top: 15px;
+  padding: 1.2vh 8vh;
+  font-size: 40px;
+  font-weight: bold;
+  color: #36454f;
+  font-family: "Concert One", cursive;
+  width: 20%;
+  transition: 0.5s;
+  filter: drop-shadow(10px 10px 15px purple);
+}
+.ekart--header--nav {
+  width: 80%;
+  padding: 1vh 2vh;
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+.ekart--bottom--bar {
+  display: flex;
+  justify-content: space-evenly;
+  transition: 0.5s;
+}
+
+.btn {
+  padding: 15px 25px;
+  border: none;
+  margin: 10px 0;
+}
+.btn-primary {
+  background-color: #282828;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .ekart--bottom--bar {
+    justify-content: center;
+    align-items: center;
+  }
+  .ekart-logo {
+    padding: 1vh 2vh;
+    font-size: 32px;
+    width: 18%;
+  }
+  .ekart--header--nav {
+    width: 85%;
+  }
+}

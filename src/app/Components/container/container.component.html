@@ -1,0 +1,48 @@
+<ng-container>
+  <!-- <div class="box">
+    <img [src]="produc.imgUrl" alt="image" />
+    <p>Name: {{ produc.name }}</p>
+    <p>Price: ${{ produc.price }}</p>
+    <p>Color: {{ produc.color }}</p>
+    <p>Discounted Price: ${{ getDiscountedPrice().toFixed() }}</p>
+    <p>
+      {{
+        produc.inStock > 0
+          ? " Only " + produc.inStock + " items left "
+          : " Not in Stock "
+      }}
+    </p>
+    <button type="button" class="btn btn-dark" (click)="incrementCartValue()">
+      +
+    </button>
+    <span class="m-3 fw-bold">{{ addToCart }}</span>
+    <button type="button" class="btn btn-dark" (click)="decrementCartValue()">
+      -
+    </button>
+  </div> -->
+  <app-seearch (searchTextChanged)="setSearchText($event)"></app-seearch>
+  <product-details
+    *ngIf="productListCompo.selectedProduct"
+    [productListCom]="productListComponent"
+  >
+  </product-details>
+
+  <product-list [searchText]="searchText" #productListCompo></product-list>
+  <div class="featured-products">
+    <div class="featured-product-heading">
+      <h1>Latest Arrival in Pupolar Brands</h1>
+    </div>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Nike</h3>
+      <button class="btn call-to-action">Show New Arrivals</button>
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Adidas</h3>
+      <button class="btn call-to-action">Show New Arrivals</button>
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Reebok</h3>
+      <button class="btn call-to-action">Show New Arrivals</button>
+    </featured-brands>
+  </div>
+</ng-container>

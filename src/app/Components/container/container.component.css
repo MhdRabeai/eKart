@@ -1,0 +1,32 @@
+img {
+  width: 200px;
+}
+.box {
+  padding: 10px 30px;
+}
+.product-container {
+  margin: 20px auto;
+  padding: 0 20vh;
+}
+.featured-products {
+  background-color: #28282b;
+  padding: 20px 10px;
+  display: flex;
+}
+.featured-product-heading {
+  width: 320px;
+  margin: 10px;
+  padding: 20px 30px;
+  color: #fff;
+}
+.call-to-action {
+  background-color: #28282b;
+  color: #fff;
+  width: 100%;
+  padding: 15px 5px;
+  font-size: 14px;
+}
+.title,
+.call-to-action {
+  margin: 10px 0;
+}

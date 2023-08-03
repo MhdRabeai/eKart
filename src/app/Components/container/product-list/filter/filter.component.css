@@ -1,0 +1,14 @@
+.filter-container {
+  margin: 10px auto;
+  padding: 0 15vh;
+  transition: 0.5s;
+}
+input[type="radio"] {
+  margin-inline: 10px 5px;
+}
+@media (max-width: 767px) {
+  .filter-container {
+    padding: 15px 5px;
+    text-align: center;
+  }
+}
